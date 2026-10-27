@@ -1,0 +1,35 @@
+spring:
+  application:
+    name: smart-park-test
+  datasource:
+    url: jdbc:h2:mem:smartpark;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE;LOCK_TIMEOUT=10000
+    username: sa
+    password: ''
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: create-drop
+  h2:
+    console:
+      enabled: false
+  jackson:
+    deserialization:
+      fail-on-unknown-properties: true
+      accept-float-as-int: false
+      fail-on-trailing-tokens: true
+  web:
+    resources:
+      add-mappings: false
+smartpark:
+  auth:
+    username: ${SMARTPARK_USERNAME:admin}
+    password: ${SMARTPARK_PASSWORD:smartpark-demo}
+    secret: ${SMARTPARK_JWT_SECRET:local-demo-signing-secret-change-me-32-bytes-minimum}
+    issuer: smartpark
+    token-ttl: 1h
+  seed:
+    enabled: true
+  expiration:
+    enabled: true
+    delay-ms: 1000
+

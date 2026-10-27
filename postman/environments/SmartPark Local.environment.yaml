@@ -1,0 +1,12 @@
+name: SmartPark Local
+values:
+  - key: baseUrl
+    value: 'http://localhost:8080'
+  - key: username
+    value: admin
+  - key: password
+    value: smartpark-demo
+  - key: lotId
+    value: CENTRAL
+  - key: accessToken
+    value: ''

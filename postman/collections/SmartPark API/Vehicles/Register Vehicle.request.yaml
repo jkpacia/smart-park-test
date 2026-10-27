@@ -1,0 +1,18 @@
+$kind: http-request
+method: POST
+url: "{{baseUrl}}/api/vehicles"
+auth:
+  type: bearer
+  credentials:
+    token: "{{accessToken}}"
+order: 1000
+headers:
+  Content-Type: application/json
+body:
+  type: json
+  content: |-
+    {
+      "licensePlate": "TEST-001",
+      "type": "CAR",
+      "ownerName": "Jane Doe"
+    }

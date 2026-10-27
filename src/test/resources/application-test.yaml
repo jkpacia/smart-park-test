@@ -1,0 +1,14 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:smartpark-tests;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+smartpark:
+  auth:
+    username: test-admin
+    password: test-password
+    secret: test-only-signing-secret-at-least-32-bytes-long
+    issuer: smartpark-test
+    token-ttl: 1h
+  seed:
+    enabled: false
+  expiration:
+    enabled: false

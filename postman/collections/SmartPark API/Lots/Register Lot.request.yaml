@@ -1,0 +1,19 @@
+$kind: http-request
+method: POST
+url: "{{baseUrl}}/api/lots"
+auth:
+  type: bearer
+  credentials:
+    token: "{{accessToken}}"
+order: 1000
+headers:
+  Content-Type: application/json
+body:
+  type: json
+  content: |-
+    {
+      "lotId": "API-LOT",
+      "location": "Test Avenue",
+      "capacity": 5,
+      "costPerMinute": 0.50
+    }

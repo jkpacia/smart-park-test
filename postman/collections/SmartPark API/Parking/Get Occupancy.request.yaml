@@ -1,0 +1,8 @@
+$kind: http-request
+method: GET
+url: "{{baseUrl}}/api/lots/{{lotId}}/occupancy"
+auth:
+  type: bearer
+  credentials:
+    token: "{{accessToken}}"
+order: 1429
